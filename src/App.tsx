@@ -1,25 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { createContext } from 'react';
 import './App.css';
+
+import { RecoilRoot } from 'recoil';
+import { ITaskRepository } from './repository/taskRepository/taskRepository';
+import { MockTaskRepository } from './repository/taskRepository/mockTaskRepository';
+import { TaskCreateForm, TaskList } from './Task';
+
+export const RepositoryContext = createContext<ITaskRepository>(new MockTaskRepository());
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RepositoryContext.Provider value={new MockTaskRepository()}>
+      <RecoilRoot>
+        <TaskCreateForm />
+        <TaskList />
+      </RecoilRoot>
+    </RepositoryContext.Provider>
   );
 }
 
