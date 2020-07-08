@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: #EBECF0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +11,103 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+button, input {
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  border-radius: 320px;
+  padding: 16px;
+  background-color: #EBECF0;
+  text-shadow: 1px 1px 0 #FFF;
+}
+label {
+  display: block;
+  margin-bottom: 24px;
+  width: 500px;
+}
+input[type=text] {
+  margin-right: 8px;
+  box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+input[type=text]:focus {
+  box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+}
+button {
+  color: #61677C;
+  font-weight: bold;
+  box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+}
+button:hover {
+  box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+}
+button:active {
+  box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+}
+
+.card {
+  border-radius: 16px;
+  background: #EBECF0;
+  box-shadow: 5px 5px 20px #c8c9cc,
+  -5px -5px 20px #ffffff;
+}
+
+input[type=checkbox] {
+  position: relative;
+  cursor: pointer;
+  margin: 8px;
+  box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+}
+input[type=checkbox]::before {
+  content: '\02714';
+  color: cornflowerblue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  font-size: 23px;
+  text-align: center;
+}
+
+input[type=checkbox]:checked {
+  margin: 8px;
+  box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: cornflowerblue;
+}
+input[type=checkbox]:checked::after {
+  content: '\02714';
+  color: #EBECF0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  font-size: 23px;
+  text-align: center;
+}
+
+input[type=checkbox]:hover {
+  box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
 }
